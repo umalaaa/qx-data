@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QX 数据加载中...</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; 
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+.placeholder {
+  background: white;
+  border-radius: 20px;
+  padding: 60px 40px;
+  text-align: center;
+  max-width: 500px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 30px;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+h1 { font-size: 28px; color: #1d1d1f; margin-bottom: 16px; }
+p { color: #86868b; line-height: 1.6; margin-bottom: 12px; }
+.notice { 
+  background: #f5f5f7; 
+  padding: 20px; 
+  border-radius: 12px; 
+  margin-top: 30px;
+  text-align: left;
+}
+.notice h3 { font-size: 16px; color: #1d1d1f; margin-bottom: 12px; }
+.notice ol { margin-left: 20px; color: #86868b; font-size: 14px; line-height: 1.8; }
+.notice code { background: white; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+</style>
+</head>
+<body>
+<div class="placeholder">
+  <div class="spinner"></div>
+  <h1>🔒 安全占位页面</h1>
+  <p>此页面仅作为 Quantumult X 数据查看器的占位符。</p>
+  <p><strong>你的数据不会上传到此页面。</strong></p>
+  
+  <div class="notice">
+    <h3>📱 如何查看你的 QX 数据：</h3>
+    <ol>
+      <li>确保已订阅 <code>qx-rewrite.snippet</code></li>
+      <li>开启 QX 的 <strong>Rewrite</strong> 和 <strong>MitM</strong></li>
+      <li>在 QX 开启状态下访问此页面</li>
+      <li>QX 会自动劫持此页面并注入你的本地数据</li>
+    </ol>
+  </div>
+  
+  <p style="margin-top: 30px; font-size: 12px; color: #d1d1d6;">
+    GitHub Pages · 数据查看器占位符<br>
+    你的数据仅在本地处理，不会离开设备
+  </p>
+</div>
+</body>
+</html>
